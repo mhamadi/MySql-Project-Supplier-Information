@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> MySql Project
+  </title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" id="title">
+      <h1> MySql Project </h1>
+      <h2> Done by Moe(Mohamad) Hamadi </h2>
+    </a>
+  </header>
+ <div id="outer">
+   <div id="inner">
+   <h2>The MySql Database is filled with Supplier Information who supply computer hardware parts and
+ the cost they charge for those parts. The queries below retrieve specific information about suppliers,
+parts, and their costs. </h2>
+  <form method="POST" action="query1.php">
+    <h3>Retrieve information about each supplier who supplied a given part </h3>
+    Please select the part's name: <br>
+    <select name="partName">
+      <option value="Mother board">Mother board</option>
+      <option value="CPU-AMD">CPU-AMD</option>
+      <option value="Case">Case</option>
+      <option value="Monitor">Monitor</option>
+      <option value="Cable">Cable</option>
+    </select> <br> <br>
+    Please check the information you need: <br>
+    <input type="checkbox" name="supplierInfo1" value="sid">Supplier ID <br>
+    <input type="checkbox" name="supplierInfo2" value="sname">Supplier Name <br>
+    <input type="checkbox" name="supplierInfo3" value="address">Supplier Address <br>
+    <input type="checkbox" name="supplierInfo4" value="cost">Cost Charged <br> <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <form method="POST" action="query2.php">
+    <h3>Retrieve the names of suppliers who have ever supplied a part
+with a given cost or higher</h3>
+    Please enter the cost:
+    <br> $<input type="text" name="cost"> <br>
+    <br> <input type="submit" value="Submit">
+  </form>
+
+  <form method="POST" action="query3.php">
+    <h3>Retrieve the names and addresses for suppliers who charge the
+most for a given part </h3>
+    Please enter the part ID:
+    <br> <input type="text" name="pid"> <br>
+    <br> <input type="submit" value="Submit">
+  </form>
+
+  <form method="POST" action="query4.php">
+    <h3>Retrieve the names of the parts with a given color which
+were supplied by all the suppliers in a given address</h3>
+    Please enter the color:
+    <br> <input type="text" name="color"> <br>
+    <br>   Please enter the address:
+    <br> <input type="text" name="address"> <br>
+    <br> <input type="submit" value="Submit">
+  </form>
+
+  <form method="POST" action="query5.php">
+    <h3>Retrieve the supplier IDs and names of the suppliers in a given address who
+do not supply any part </h3>
+    Please enter the address:
+    <br> <input type="text" name="address"> <br>
+    <br> <input type="submit" value="Submit">
+  </form>
+  </div>
+</div>
+
+</body>
+</html>
